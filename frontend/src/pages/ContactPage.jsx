@@ -28,7 +28,7 @@ export default function ContactPage() {
           <Link className="v-link" to="/">← Back to sign in</Link>
           <button type="button" className="v-theme v-theme-inline" onClick={toggleTheme}
             aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
-            {theme === 'dark' ? '☀ Light' : '☾ Dark'}
+            {theme === 'dark' ? '☀️  Light' : '🌙 Dark'}
           </button>
         </nav>
 

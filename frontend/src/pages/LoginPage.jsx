@@ -183,7 +183,7 @@ export default function LoginPage({ portalRole = 'salesperson' }) {
       <main className="v-main">
         <button type="button" className="v-theme" onClick={toggleTheme}
           aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
-          {theme === 'dark' ? '☀ Light' : '☾ Dark'}
+          {theme === 'dark' ? '☀️' : '🌙'}
         </button>
 
         <div className="v-card">
@@ -246,7 +246,7 @@ export default function LoginPage({ portalRole = 'salesperson' }) {
 
           <footer className="v-foot">
             <span>Terminal {TERMINAL_ID}</span><span>{BRANCH}</span>
-            <span>{online ? 'Online' : 'Offline'}</span><span>Secure connection</span>
+            <span>{online ? 'Online' : 'Offline'}</span><span>Secure connection 🛡️</span>
           </footer>
         </div>
       </main>
