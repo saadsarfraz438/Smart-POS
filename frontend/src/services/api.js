@@ -20,6 +20,8 @@ api.interceptors.request.use((config) => {
 });
 
 export const login = (payload) => api.post('/auth/login', payload);
+export const requestPasswordReset = (email) => api.post('/auth/password-reset/request', { email });
+export const confirmPasswordReset = (payload) => api.post('/auth/password-reset/confirm', payload);
 export const getCurrentUser = () => api.get('/auth/me');
 
 export const getProducts = () => api.get('/products');

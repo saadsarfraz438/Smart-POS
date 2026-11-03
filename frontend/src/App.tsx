@@ -15,6 +15,7 @@ import SalesRecordsPage from './pages/SalesRecordsPage.jsx';
 import SettingsPage from './pages/SettingsPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
 import { getAnyStoredSession, getDefaultPathForRole, getStoredSession } from './lib/auth.ts';
 
 function ProtectedRoute({ children, role, loginPath }: { children: ReactNode; role: 'admin' | 'salesperson'; loginPath: string }) {
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/login" element={<Navigate to="/admin/login" replace />} />
         <Route path="/admin/login" element={<LoginPage portalRole="admin" />} />
         <Route path="/sales/login" element={<LoginPage portalRole="salesperson" />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/" element={<HomeRedirect />} />
         <Route path="/admin" element={<ProtectedRoute role="admin" loginPath="/admin/login"><MainLayout /></ProtectedRoute>}>
           <Route index element={<Navigate to="dashboard" replace />} />
