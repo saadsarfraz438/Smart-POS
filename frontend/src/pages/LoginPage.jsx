@@ -11,9 +11,9 @@ import './login.css';
 // FR-1.1: four roles, default = Cashier/Salesperson. `pin` = numeric PIN mode + numpad (FR-1.2 / 1.3).
 const ROLES = {
   owner: { tab: 'Store Owner', pin: false },
-  salesperson: { tab: 'Cashier/Salesperson', pin: true },
-  inventory: { tab: 'Inventory Staff', pin: true },
   admin: { tab: 'Admin', pin: false },
+  salesperson: { tab: 'Cashier', pin: true },
+  inventory: { tab: 'Inventory Staff', pin: true },
 };
 const KEYS = ['1', '2', '3', '⌫', '4', '5', '6', '0', '7', '8', '9', 'C'];
 const env = import.meta.env || {};
