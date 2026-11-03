@@ -1,0 +1,179 @@
+:root {
+  --auth-ink: #12263a;
+  --auth-teal: #0f766e;
+  --auth-amber: #f59e0b;
+  --auth-paper: #f4f6f8;
+  --auth-line: #d9e0e7;
+}
+
+.auth-shell {
+  display: grid;
+  grid-template-columns: minmax(320px, 5fr) 6fr;
+  background: var(--auth-paper);
+}
+
+/* Left panel */
+.auth-side {
+  background: var(--auth-ink);
+  color: #fff;
+  padding: 2.5rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.auth-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.auth-illustration {
+  width: 100%;
+  max-width: 380px;
+  align-self: center;
+}
+
+.auth-side-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.auth-roles {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.auth-role-card {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  opacity: 0.7;
+  transition: opacity 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.auth-role-card.is-active {
+  opacity: 1;
+  border-color: var(--auth-amber);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.auth-role-card h3 {
+  font-size: 0.95rem;
+  margin: 0 0 0.35rem;
+}
+
+.auth-role-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Right panel */
+.auth-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  border: 1px solid var(--auth-line);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(18, 38, 58, 0.08);
+}
+
+.auth-mobile-brand {
+  display: none;
+  font-weight: 700;
+  color: var(--auth-ink);
+  margin-bottom: 1rem;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--auth-paper);
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.auth-tab {
+  border: 0;
+  background: transparent;
+  padding: 0.6rem 0.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #5b6b7b;
+  transition: background 0.15s, color 0.15s;
+}
+
+.auth-tab.is-active {
+  background: var(--auth-ink);
+  color: #fff;
+}
+
+.auth-tab:focus-visible,
+.auth-submit:focus-visible {
+  outline: 3px solid var(--auth-amber);
+  outline-offset: 2px;
+}
+
+.auth-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--auth-ink);
+  margin-bottom: 0.25rem;
+}
+
+.auth-submit {
+  background: var(--auth-teal);
+  border-color: var(--auth-teal);
+  padding: 0.65rem;
+  font-weight: 600;
+}
+
+.auth-submit:hover:not(:disabled) {
+  background: #0b5f58;
+  border-color: #0b5f58;
+}
+
+/* Admin re-auth overlay (used by AdminGuard) */
+.guard-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 38, 58, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 2000;
+}
+
+.guard-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.75rem;
+}
+
+@media (max-width: 900px) {
+  .auth-shell {
+    grid-template-columns: 1fr;
+  }
+  .auth-side {
+    display: none;
+  }
+  .auth-mobile-brand {
+    display: block;
+  }
+}
