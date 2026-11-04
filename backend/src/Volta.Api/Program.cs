@@ -77,6 +77,11 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+await using (var scope = app.Services.CreateAsyncScope())
+{
+    await scope.ServiceProvider.GetRequiredService<MasterDbContext>().Database.MigrateAsync();
+}
+
 if (app.Environment.IsDevelopment())
     await DevSeeder.RunAsync(app.Services, cfg["Seed:TenantConnection"] ?? throw new InvalidOperationException("Seed:TenantConnection missing."));
 

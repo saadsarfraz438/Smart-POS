@@ -14,10 +14,10 @@ Errors are `{ code, message, user? }` using the SRS codes.
 
 ## Run (development)
 1. SQL Server (LocalDB/Docker) running; edit `appsettings.Development.json` if your server differs.
-2. `dotnet run --project src/Volta.Api` — the dev seeder creates `Volta_Master`, `Volta_Tenant_A89F` and tenant **TRD-8821**.
+2. `dotnet run --project src/Volta.Api` — EF migrations create/update `Volta_Master`; the dev seeder creates `Volta_Tenant_A89F` and tenant **TRD-8821**.
 3. Frontend: `VITE_API_URL=https://localhost:<port>` and allow its origin in `Cors:Origins`.
 
 Demo logins (dev only): cashier_01 / PIN 1234, cashier_02 / 5678, admin / Admin#12345, inv01 / Stock#12345, online01 / Online#12345, owner / Owner#12345 (+ OTP printed in the API console).
 
 ## Production
-Set `Jwt:Key`, `Security:ConnectionKey` (base64, 32 bytes), connection strings and `Cors:Origins` via Key Vault / env vars. Replace the OTP console log with real e-mail/SMS delivery. Use EF migrations (`dotnet ef migrations add Init -c MasterDbContext` / `-c TenantDbContext`) instead of `EnsureCreated`.
+Set `Jwt:Key`, `Security:ConnectionKey` (base64, 32 bytes), connection strings and `Cors:Origins` via Key Vault / env vars. Replace the OTP console log with real e-mail/SMS delivery. The API applies the checked-in EF migrations at startup. New tenants use the tenant migration set before their owner is seeded.

@@ -15,7 +15,7 @@ public static class DevSeeder
         using var scope = sp.CreateScope();
         var master = scope.ServiceProvider.GetRequiredService<MasterDbContext>();
         var protector = sp.GetRequiredService<ConnectionStringProtector>();
-        await master.Database.EnsureCreatedAsync();
+        await master.Database.MigrateAsync();
         if (await master.Tenants.AnyAsync()) return;
 
         master.Tenants.Add(new Tenant
@@ -28,7 +28,7 @@ public static class DevSeeder
         await master.SaveChangesAsync();
 
         using var db = new TenantDbContext(new DbContextOptionsBuilder<TenantDbContext>().UseSqlServer(tenantConnection).Options);
-        await db.Database.EnsureCreatedAsync();
+        await db.Database.MigrateAsync();
         const string br = "BR-LAHORE-01";
         User U(string name, string? email, string display, int role, string? pw, string? pin) => new()
         { Username = name, Email = email, DisplayName = display, RoleId = role, BranchId = br,
