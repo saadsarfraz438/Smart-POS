@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Volta.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fb2dfb4b75162013f8094130b075e0b9ff6847f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e264c64e41510eb1d713f60ba9d815dccc13dd71")]
 [assembly: System.Reflection.AssemblyProductAttribute("Volta.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Volta.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

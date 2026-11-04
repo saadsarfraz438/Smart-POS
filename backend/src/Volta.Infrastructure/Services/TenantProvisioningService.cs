@@ -56,7 +56,7 @@ public sealed class TenantProvisioningService(
             .UseSqlServer(tenantConnection, sql => sql.EnableRetryOnFailure(3))
             .Options;
         await using var tenantDb = new TenantDbContext(options);
-        await tenantDb.Database.EnsureCreatedAsync(cancellationToken);
+        await tenantDb.Database.MigrateAsync(cancellationToken);
 
         logger.LogInformation("Provisioned tenant database {DatabaseName}.", databaseName);
         return new ProvisionedTenant(databaseName, tenantConnection);
