@@ -4,7 +4,7 @@ using Volta.Infrastructure.Data.Contexts;
 
 namespace Volta.Infrastructure.Data;
 
-public sealed class MasterDbContextFactory : IDesignTimeDbContextFactory<MasterDbContext>
+public sealed class MasterDbContextDesignFactory : IDesignTimeDbContextFactory<MasterDbContext>
 {
     public MasterDbContext CreateDbContext(string[] args)
     {
@@ -15,7 +15,7 @@ public sealed class MasterDbContextFactory : IDesignTimeDbContextFactory<MasterD
     }
 }
 
-public sealed class TenantDbContextFactory : IDesignTimeDbContextFactory<TenantDbContext>
+public sealed class TenantDbContextDesignFactory : IDesignTimeDbContextFactory<TenantDbContext>
 {
     public TenantDbContext CreateDbContext(string[] args)
     {
