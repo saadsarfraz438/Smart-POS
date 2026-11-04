@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Dark Radial Gradient Background -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0b1b36" />
+      <stop offset="70%" stop-color="#060c18" />
+      <stop offset="100%" stop-color="#03060c" />
+    </radialGradient>
+
+    <!-- Outer Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#0066ff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ff9900" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Blue "V" Gradient -->
+    <linearGradient id="vGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" />
+      <stop offset="60%" stop-color="#0066ff" />
+      <stop offset="100%" stop-color="#003b99" />
+    </linearGradient>
+
+    <!-- Yellow Lightning Bolt Gradient -->
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffff00" />
+      <stop offset="40%" stop-color="#ffb700" />
+      <stop offset="100%" stop-color="#ff5500" />
+    </linearGradient>
+
+    <!-- Neon Glow Effects -->
+    <filter id="blueGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="yellowGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="ringGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4" />
+      <feComposite in="SourceGraphic" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" rx="32" fill="url(#bgGlow)" />
+
+  <!-- Outer Neon Rings -->
+  <circle cx="250" cy="250" r="195" fill="none" stroke="url(#ringGrad)" stroke-width="2" opacity="0.4" />
+  <circle cx="250" cy="250" r="185" fill="none" stroke="url(#ringGrad)" stroke-width="3.5" filter="url(#ringGlow)" />
+  <circle cx="250" cy="250" r="175" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.25" />
+
+  <!-- Background Sparkles & Particles -->
+  <g opacity="0.65">
+    <circle cx="310" cy="140" r="3" fill="#ffcc00" filter="url(#yellowGlow)" />
+    <circle cx="335" cy="165" r="2" fill="#ff9900" />
+    <circle cx="350" cy="190" r="4" fill="#ffea00" filter="url(#yellowGlow)" />
+    <circle cx="320" cy="210" r="2.5" fill="#ff7700" />
+    <circle cx="160" cy="240" r="3" fill="#00e5ff" filter="url(#blueGlow)" />
+    <circle cx="145" cy="275" r="2" fill="#0088ff" />
+    <circle cx="175" cy="300" r="3.5" fill="#00e5ff" filter="url(#blueGlow)" />
+  </g>
+
+  <!-- LOGO MARK -->
+  <g transform="translate(0, -5)">
+    <!-- Blue "V" (Left Arm) -->
+    <path d="M 148 160 
+             L 190 160 
+             L 242 290 
+             L 268 220 
+             L 295 220 
+             L 246 345 
+             L 220 345 
+             Z" fill="url(#vGrad)" stroke="#00f0ff" stroke-width="2" stroke-linejoin="round" filter="url(#blueGlow)" />
+
+    <!-- Inner V Accent Highlight -->
+    <path d="M 160 172 L 182 172 L 233 305 L 227 305 Z" fill="#ffffff" opacity="0.4" />
+
+    <!-- Yellow Lightning Bolt (Right Arm) -->
+    <path d="M 270 140 
+             L 335 140 
+             L 265 245 
+             L 305 245 
+             L 245 365 
+             L 262 275 
+             L 225 275 
+             Z" fill="url(#boltGrad)" stroke="#fffb00" stroke-width="2" stroke-linejoin="round" filter="url(#yellowGlow)" />
+
+    <!-- Bolt Inner Highlight -->
+    <path d="M 278 148 L 322 148 L 265 233 L 290 233 L 260 295 L 269 263 L 237 263 Z" fill="#ffffff" opacity="0.35" />
+  </g>
+</svg>

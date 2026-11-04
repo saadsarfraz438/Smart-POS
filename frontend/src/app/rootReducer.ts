@@ -2,6 +2,7 @@ import { combineReducers, createSlice, type PayloadAction } from '@reduxjs/toolk
 import type { Session } from '../types/auth.types';
 import { authApi } from '../services/api/authApi';
 import { tenantApi } from '../services/api/tenantApi';
+import { signupApi } from '../services/api/signupApi';
 
 const authSlice = createSlice({
   name: 'auth',
@@ -17,4 +18,5 @@ export const rootReducer = combineReducers({
   auth: authSlice.reducer,
   [authApi.reducerPath]: authApi.reducer,
   [tenantApi.reducerPath]: tenantApi.reducer,
+  [signupApi.reducerPath]: signupApi.reducer,
 });

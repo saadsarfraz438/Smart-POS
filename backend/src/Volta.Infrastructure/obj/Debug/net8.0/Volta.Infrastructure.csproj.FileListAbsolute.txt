@@ -1,0 +1,16 @@
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.AssemblyInfo.cs
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.sourcelink.json
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\bin\Debug\net8.0\Volta.Infrastructure.deps.json
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\bin\Debug\net8.0\Volta.Infrastructure.dll
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\bin\Debug\net8.0\Volta.Infrastructure.pdb
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\bin\Debug\net8.0\Volta.Core.dll
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\bin\Debug\net8.0\Volta.Core.pdb
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.In.96D9E0C8.Up2Date
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.dll
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\refint\Volta.Infrastructure.dll
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.pdb
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\ref\Volta.Infrastructure.dll

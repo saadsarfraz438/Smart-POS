@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SXT7rYPznIEyY9zMRJ+3AKAVaJt0powakShMhFe8YTg=",
+  "Source": "Volta.Api",
+  "BasePath": "_content/Volta.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

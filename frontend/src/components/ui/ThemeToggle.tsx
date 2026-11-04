@@ -15,7 +15,7 @@ export default function ThemeToggle() {
   const next = theme === 'dark' ? 'light' : 'dark';
   return (
     <button type="button" onClick={() => setTheme(next)} aria-label={`Switch to ${next} mode`}
-      className="absolute top-4 right-4 min-h-[48px] px-5 rounded-3xl border border-line bg-card text-ink font-semibold">
+      className="absolute top-4 right-1 min-h-[48px] px-5 rounded-3xl border border-line bg-card text-ink font-semibold">
       {theme === 'dark' ? '☀️' : '🌙'}
     </button>
   );
