@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root, [data-theme='light'] {
+  --bg:#eef2f9; --card:#f8faff; --ink:#0a1a3f; --mute:#46536f; --line:#9fb0cf; --field:#ffffff;
+  --key:#e6ecf8; --key-sh:#aab8d4; --brand:#2563eb; --brand2:#0e7490; --err:#b91c1c; --ok:#15803d; --link:#2563eb;
+}
+[data-theme='dark'] {
+  --bg:#0a1126; --card:#111b38; --ink:#eef3ff; --mute:#b0bcd9; --line:#3a4b78; --field:#0a1329;
+  --key:#1b2a52; --key-sh:#050a18; --err:#fca5a5; --ok:#4ade80; --link:#93c5fd;
+}
+body { background: var(--bg); color: var(--ink); font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif; }
+
+@layer components {
+  .v-label { @apply block mt-4 mb-1.5 font-semibold; }
+  .v-input { @apply w-full min-h-[48px] px-4 rounded-[10px] border border-line bg-field text-ink text-base placeholder:text-mute; }
+  .v-input:focus, .v-btn:focus-visible, .v-link:focus-visible, .v-tab:focus-visible, .v-key:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+  .v-btn { @apply w-full min-h-[56px] rounded-[28px] text-white text-lg font-bold bg-gradient-to-r from-brand to-brand2 shadow-lg disabled:opacity-60 disabled:cursor-not-allowed; }
+  .v-link { @apply inline-flex items-center min-h-[48px] font-semibold underline; color: var(--link); }
+  .v-tab { @apply flex-1 min-h-[48px] px-3 rounded-3xl text-sm font-semibold text-ink; }
+  .v-tab[aria-selected='true'] { @apply bg-brand text-white; }
+  .v-key { @apply min-h-[52px] min-w-[48px] rounded-[26px] bg-key text-ink text-2xl font-bold select-none transition-[transform,box-shadow] duration-75 motion-reduce:transition-none; box-shadow: 0 4px 0 var(--key-sh); touch-action: manipulation; }
+  .v-key:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--key-sh); }
+}
