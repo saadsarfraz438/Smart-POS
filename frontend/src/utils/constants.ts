@@ -8,10 +8,7 @@ export const BRANCH_NAME: string = env.VITE_BRANCH_NAME ?? 'Main Branch - Lahore
 
 export const ENDPOINTS = {
   tenantLookup: '/api/v1/auth/tenant-lookup',
-<<<<<<< HEAD
   signup: '/api/v1/auth/signup',
-=======
->>>>>>> 3ab6cd57c8f22b843ae6c3cc5f44f70f95f48954
   login: '/api/v1/auth/login',
   health: '/api/v1/health',
 } as const;
