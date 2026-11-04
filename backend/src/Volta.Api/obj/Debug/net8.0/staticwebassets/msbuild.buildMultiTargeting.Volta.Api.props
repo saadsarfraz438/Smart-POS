@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Volta.Api.props" />
-</Project>
