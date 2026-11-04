@@ -14,3 +14,5 @@ C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastruc
 C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\refint\Volta.Infrastructure.dll
 C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.pdb
 C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\ref\Volta.Infrastructure.dll
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\bin\Debug\net8.0\Volta.Infrastructure.runtimeconfig.json
+C:\Users\hp\Downloads\Saad sarfraz\GitHub\Smart-POS\backend\src\Volta.Infrastructure\obj\Debug\net8.0\Volta.Infrastructure.genruntimeconfig.cache
