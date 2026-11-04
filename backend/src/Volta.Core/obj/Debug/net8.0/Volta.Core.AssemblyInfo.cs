@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Volta.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+491df4f5435629a0b33bd8bf3960bbee88231d7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9fb2dfb4b75162013f8094130b075e0b9ff6847f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Volta.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Volta.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

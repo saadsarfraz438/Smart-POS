@@ -1,6 +1,7 @@
 using System.Data;
 using System.Text.RegularExpressions;
 using Azure;
+using Azure.Core;
 using Azure.Identity;
 using Azure.ResourceManager;
 using Azure.ResourceManager.Sql;
@@ -70,9 +71,9 @@ public sealed class TenantProvisioningService(
         {
             var server = await GetServerAsync(cancellationToken);
             var databases = server.GetSqlDatabases();
-            var existing = await databases.GetIfExistsAsync(databaseName, cancellationToken);
-            if (existing.HasValue)
-                await existing.Value.DeleteAsync(WaitUntil.Completed, cancellationToken);
+            var existing = await databases.GetIfExistsAsync(databaseName, null, null, cancellationToken);
+            if (existing.HasValue && existing.Value is { } resource)
+                await resource.DeleteAsync(WaitUntil.Completed, cancellationToken);
         }
         else
         {
@@ -114,8 +115,8 @@ public sealed class TenantProvisioningService(
             ?? throw new InvalidOperationException("AzureSql:ServerName is missing.");
         var client = new ArmClient(new DefaultAzureCredential());
         var subscription = client.GetSubscriptionResource(new ResourceIdentifier($"/subscriptions/{subscriptionId}"));
-        var group = await subscription.GetResourceGroup(resourceGroup).GetAsync(cancellationToken);
-        var server = await group.Value.GetSqlServer(serverName).GetAsync(cancellationToken);
+        var group = await subscription.GetResourceGroupAsync(resourceGroup, cancellationToken);
+        var server = group.Value.GetSqlServer(serverName);
         return server.Value;
     }
 
