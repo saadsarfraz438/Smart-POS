@@ -26,12 +26,31 @@ dist-ssr
 # Backend build outputs
 backend/LumensoftPosApi/bin/
 backend/LumensoftPosApi/obj/
+backend/**/bin/
+backend/**/obj/
 backend/LumensoftPosApi/*.db
 backend/LumensoftPosApi/*.db-shm
 backend/LumensoftPosApi/*.db-wal
 
 # Configuration files containing secrets
-appsettings.json
-appsettings.Development.json
-appsettings.Production.json
+**/appsettings.json
+**/appsettings.Development.json
+**/appsettings.Production.json
+!**/appsettings.example.json
 .env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Local certificates, deployment profiles, and private keys
+*.pfx
+*.p12
+*.pem
+*.key
+*.publishsettings
+*.pubxml.user
+
+# Local screenshots and uploads; keep application assets under source control explicitly
+uploads/
+screenshots/
